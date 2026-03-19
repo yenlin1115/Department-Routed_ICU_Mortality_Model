@@ -368,7 +368,7 @@ def main() -> None:
     lm_path = data_dir / "lm_feat_mis0.mat"
     paper_available = lm_path.exists()
     if paper_available:
-        print("Loading paper reference model ...")
+        print("Loading Citi L, Barbieri R.  model ...")
         lm = load_lm(lm_path)
         svm_cache_path = data_dir / "lm_svm_scores.npz"
         if svm_cache_path.exists():
@@ -380,7 +380,7 @@ def main() -> None:
         pb_paper = compute_paper_probs(Xb, lm, svm_b)
         pc_paper = compute_paper_probs(Xc, lm, svm_c)
     else:
-        print("WARNING: lm_feat_mis0.mat not found — paper reference curves skipped.")
+        print("WARNING: lm_feat_mis0.mat not found — Citi L, Barbieri R.  model curves skipped.")
         pa_paper = pb_paper = pc_paper = None
 
     print(f"\nTraining GBM backbone on Set A ...")
@@ -427,7 +427,7 @@ def main() -> None:
     print(f"  {'Model':<22} {'B E1':>8} {'B E2':>8} {'C E1':>8} {'C E2':>8}")
     print(f"  {'-'*22} {'-'*8} {'-'*8} {'-'*8} {'-'*8}")
     if paper_available:
-        print(f"  {'Paper reference':<22} {paper_b_e1:>8.4f} {paper_b_e2:>8.2f}"
+        print(f"  {'Citi L, Barbieri R. ':<22} {paper_b_e1:>8.4f} {paper_b_e2:>8.2f}"
               f" {paper_c_e1:>8.4f} {paper_c_e2:>8.2f}")
     print(f"  {'Department-routed':<22} {dept_b_e1:>8.4f} {dept_b_e2:>8.2f}"
           f" {dept_c_e1:>8.4f} {dept_c_e2:>8.2f}")
@@ -451,7 +451,7 @@ def main() -> None:
                  out_dir / "figure_dca_curves.png")
         print(f"\nDone. Figures saved to: {out_dir}/")
     else:
-        print("\nSkipping figures (paper reference not available).")
+        print("\nSkipping figures (Citi L, Barbieri R.  not available).")
 
     print(f"Prediction output files in: {tmp_dir}/")
 

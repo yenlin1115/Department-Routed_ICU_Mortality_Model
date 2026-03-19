@@ -20,13 +20,14 @@ for in-hospital mortality prediction in ICU patients, evaluated on the PhysioNet
 
 **Results:**
 
-| Model            | B E1   | B E2  | C E1   | C E2  |
-|------------------|--------|-------|--------|-------|
-| Paper reference  | 0.5199 | 13.53 | 0.5276 | 21.20 |
-| Dept-routed      | 0.5216 | 11.85 | 0.5197 | 23.84 |
-| Target           | >0.5200| <13.54| >0.5345| <17.88|
+| Model                     | B E1   | B E2  | C E1   | C E2  |
+|---------------------------|--------|-------|--------|-------|
+| Citi L, Barbieri R. model | 0.5199 | 13.53 | 0.5276 | 21.20 |
+| Dept-routed               | 0.5216 | 11.85 | 0.5197 | 23.84 |
+| Target                    | >0.5200| <13.54| >0.5345| <17.88|
 
-The department-routed model beats the paper reference on both Set B metrics.
+
+The department-routed model beats the Citi L, Barbieri R.  on both Set B metrics.
 
 ---
 
@@ -59,8 +60,8 @@ pip install -r requirements.txt
 | `Outcomes-b.txt` | Ground-truth labels, Set B |
 | `Outcomes-c.txt` | Ground-truth labels, Set C |
 | `score.c` | Official PhysioNet scoring program (C source) |
-| `lm_feat_mis0.mat` | Citi & Barbieri MATLAB SVM model (paper reference, for comparison curves) |
-| `lm_svm_scores.npz` | Pre-computed SVM scores from MATLAB model (speeds up paper reference evaluation) |
+| `lm_feat_mis0.mat` | Citi & Barbieri MATLAB SVM model (Citi L, Barbieri R. , for comparison curves) |
+| `lm_svm_scores.npz` | Pre-computed SVM scores from MATLAB model (speeds up Citi L, Barbieri R.  evaluation) |
 
 ---
 
