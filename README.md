@@ -37,10 +37,15 @@ The department-routed model beats the paper reference on both Set B metrics.
 
 Install Python dependencies:
 
+If use python 3(Mac):
+
 ```bash
 pip3 install -r requirements.txt
 ```
-
+If use python:
+```bash
+pip install -r requirements.txt
+```
 ---
 
 ## Data files (included in `data/`)
@@ -61,8 +66,13 @@ pip3 install -r requirements.txt
 
 ## How to run
 
+If use Python 3(Mac):
 ```bash
 python3 department_routed_model.py
+```
+If use Python:
+```bash
+python department_routed_model.py
 ```
 
 This will:
